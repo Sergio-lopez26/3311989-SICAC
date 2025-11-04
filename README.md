@@ -1,13 +1,18 @@
 # 3311989-SICAC
 ## Componente Metodológico
-### __Planteamiento del Problema__
+### :blush:__Planteamiento del Problema__
 
-:blush: En la actualidad, el consultorio odontológico [Nombre] continúa gestionando sus procesos de manera manual. Por lo general, almacenan la información en folios físicos y utilizan medios informales, como WhatsApp, para el agendamiento de citas. Esto no garantiza un control eficiente de la información, dificulta la organización y puede ocasionar la pérdida de pacientes, quienes esperan procesos más ágiles, sistemáticos y acordes con los avances tecnológicos.
+<p align="justify">
+En la actualidad, el consultorio odontológico [Nombre] continúa gestionando sus procesos de manera manual. Por lo general, almacenan la información en folios físicos y utilizan medios informales, como WhatsApp, para el agendamiento de citas. Esto no garantiza un control eficiente de la información, dificulta la organización y puede ocasionar la pérdida de pacientes, quienes esperan procesos más ágiles, sistemáticos y acordes con los avances tecnológicos.
+</p>
 
+<p align="justify">
 La ausencia de un sistema de información limita la capacidad del consultorio para administrar de manera ordenada la programación y consulta de citas, así como el seguimiento de los usuarios. Además, los pacientes requieren de una plataforma digital que les permita acceder a sus servicios en línea de manera rápida y segura.
+</p>
 
+<p align="justify">
 Ante esta situación surge la necesidad de implementar un sistema de información que integre la programación, consulta de citas e historial médico como función principal, y que, a su vez, cuente con módulos adicionales, como la gestión de los diferentes usuarios y pagos, que optimicen el manejo de la información y contribuyan a mejorar la calidad del servicio prestado.
-
+</p>
 
 ### __Justificación__
 
