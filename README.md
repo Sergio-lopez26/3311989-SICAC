@@ -1,5 +1,12 @@
+
 # 3311989-SICAC
+
+<p align="center"> 
+   <img src="https://github.com/user-attachments/assets/8ada6bc6-eabe-4097-8fa5-0f9fa3b16d80" alt="logo-removebg-preview" width="550"/>
+</p>
+
 ## Componente Metodológico
+
 ### :blush:__Planteamiento del Problema__
 
 <p align="justify">
