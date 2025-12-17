@@ -48,7 +48,9 @@ Los actores directamente afectados por el problema y beneficiados por la soluci�
 - Pacientes: requieren citas oportunas, registros claros y un servicio más ágil.
 - Administrador: encargado de gestionar usuarios, registros, servicios y reportes.
 - Equipo desarrollador del proyecto (estudiantes ADSO): responsables del análisis, diseño e implementación del sistema de información.
+<p align="justify">
 Cada uno de estos actores enfrenta dificultades por el sistema manual actual y se beneficiará de su modernización.
+</p>
 
 ### :rocket:__Justificación__
 
