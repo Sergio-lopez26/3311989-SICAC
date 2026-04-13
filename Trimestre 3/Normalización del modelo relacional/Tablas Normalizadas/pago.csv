@@ -1,0 +1,4 @@
+id,id_cita,numero_pago,id_metodo_pago,fecha_pago,monto_pagado,estado_pago
+4,1,2026001,3,2026-03-17,95000.00,Pendiente
+5,2,2026002,2,2026-03-12,155000.00,Procesado
+6,3,2026003,1,2026-03-13,75000.00,Cancelado

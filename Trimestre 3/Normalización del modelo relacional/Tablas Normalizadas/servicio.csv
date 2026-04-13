@@ -1,0 +1,4 @@
+id,nombre,descripcion,precio_actual,duracion
+1,"Limpieza Dental","Eliminación de placa y sarro para mantener la salud bucal",50000.00,"30 minutos"
+2,"Tratamiento de Caries","Remoción de tejido dañado y restauración con resina",80000.00,"45 minutos"
+3,"Evaluación Odontológica","Revisión general del estado de las piezas dentales y diagnóstico completo",40000.00,"20 minutos"
