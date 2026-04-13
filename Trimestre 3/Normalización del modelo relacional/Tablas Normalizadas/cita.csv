@@ -1,0 +1,4 @@
+id,id_historial_medico,id_odontologo,fecha_cita,hora_inicio,hora_fin,estado_cita
+1,1,1,2026-03-17,09:00:00,09:45:00,Programada
+2,1,1,2026-03-12,09:00:00,09:45:00,Atendida
+3,1,1,2026-03-13,09:00:00,09:45:00,Cancelada
