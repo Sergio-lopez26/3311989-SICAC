@@ -1,0 +1,3 @@
+id,id_tipo_documento,numero_documento,email,password,fecha_nacimiento,primer_nombre,segundo_nombre,primer_apellido,segundo_apellido,numero_celular,tipo_sangre
+1,1,1233504140,andrejur055@gmail.com,pass,1999-02-09,Jeison,Andrey,Sosa,Espitia,3203720455,O+
+2,1,809070,cubimoji@gmail.com,password,2007-03-16,Jhojan,NULL,Mojica,NULL,3139070901,AB-
