@@ -1,0 +1,107 @@
+*{ /*Aplica para todo el form*/
+    box-sizing: border-box;
+}
+
+header{
+    background-color: #d9ecff;
+    display: inline-block;
+    align-items: center;
+    width: 100%;
+    padding: 0;
+}
+#logo{ 
+    height:60px;
+    width: 80px;
+    margin-right: 10px;
+    margin-top: 10px;
+}
+
+h1, p {
+    color: #103e6e;
+    margin: 0;
+    text-align: center;
+}
+h1{
+    padding: 0;
+    font-weight: bolder;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+p{
+    padding: 15px;
+    font-size: 20px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+body {
+    width: 100%; /*vw sería para el % respecto a la hoja en horizontal*/
+    height: 100%; /*vh sería para el % respecto a la hoja en vertical*/
+    background-color: #d9ecff;
+    color: #103e6e;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+form {
+    padding: 2rem 0;
+    max-width: 500px;
+    max-height: 75%;
+    margin: 10px auto;
+    margin-bottom: 30px;
+    background-color: #ffffff;
+    padding: 10px 40px;
+    border-radius: 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+label {
+    display: flex;
+    justify-content: space-between; /*Para justificar el contenido*/
+    align-items: center;
+    margin-top: 20px;
+    font-weight: 600;
+    color: #103e6e;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+input, select {
+    width: 60%;
+    padding: 8px 12px;
+    font-family:Arial, Helvetica, sans-serif;
+    background-color: rgba(0, 0, 0, 0.06);
+    border: 3px solid #d0e2ff;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #000000;
+    outline: none; /*No permite bordes por default de los navegadores*/
+    transition: border-color 0.3 ease;
+}
+input:focus, select:focus { /*focus para cuando enfoque*/
+    border-color: #96baf3;
+    outline: none;
+}
+
+.botones{
+    display: flex;
+    gap: 20px; /*Espacio entre lso botones que estan en la misma línea*/
+    justify-content: center;
+}
+
+button{
+    width: 100%;
+    padding: 12px;
+    margin: 1em auto;
+    border-radius: 15px;
+    border: none;
+    background-color: #cdcdf7;
+    color: #103e6e;
+    font-size: 14px;
+    font-family:'Segoe UI';
+    font-weight: bold;
+    cursor: pointer;
+}
+button:hover{
+    border: 5px solid #a8a8f7;
+}

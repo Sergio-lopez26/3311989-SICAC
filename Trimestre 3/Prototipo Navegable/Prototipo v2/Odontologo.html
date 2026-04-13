@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="Registro_Odontologo.css">
+    <title>Registro Odontólogo</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+    <div class="container-fluid">
+    <a class="navbar-brand" href="#">SICAC</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="Odontologo.html">Odontólogos
+            <span class="visually-hidden">(current)</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="Pacientes.html">Pacientes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="Servicios.html">Servicios</a>
+        </li>
+      </ul>
+      <form class="d-flex">
+        <input class="form-control me-sm-2" type="search" placeholder="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+</nav>
+    <header class="d-flex justify-content-between align-items-center px-3 py-2">
+        <img id="logo" src="logo.png" alt="Logo">
+        
+        <div class="text-center">
+            <h1>Registro Odontólogo</h1>
+            <p>Por favor completar los campos con sus respectivos datos</p>
+        </div>
+
+        <button class="btn btn-outline-primary" onclick="CerrarSesion()">Cerrar Sesión</button>
+    </header>
+
+    <div class="container mt-4">
+        <div class="card shadow p-4 mx-auto" style="max-width: 600px;">
+            <form id="formRegistro" action="" method="post">
+                <label for="tipoDocumento" class="d-block mb-3">Tipo de Documento
+                    <select id="tipoDocumento" name="tipoDocumento" class="form-select">
+                        <option value="">Seleccione el tipo de documento</option>
+                        <option value="CC">Cédula de Ciudadanía</option>
+                        <option value="CE">Cédula de Extranjería</option>
+                    </select>
+                </label>
+                <label for="numDocumento" class="d-block mb-3">Número de Documento
+                    <input id="numDocumento" name="numDocumento" type="text" class="form-control" required />
+                </label>
+                <label for="primerNombre" class="d-block mb-3">Primer Nombre
+                    <input id="primerNombre" name="primerNombre" type="text" class="form-control" required />
+                </label>
+                <label for="segundoNombre" class="d-block mb-3">Segundo Nombre
+                    <input id="segundoNombre" name="segundoNombre" type="text" class="form-control" required />
+                </label>
+                <label for="primerApellido" class="d-block mb-3">Primer Apellido
+                    <input id="primerApellido" name="primerApellido" type="text" class="form-control" required />
+                </label>
+                <label for="segundoApellido" class="d-block mb-3">Segundo Apellido
+                    <input id="segundoApellido" name="segundoApellido" type="text" class="form-control" required />
+                </label>
+                <label for="numCel" class="d-block mb-3">Número de Celular
+                    <input id="numCel" name="numCel" type="tel" pattern="3[0-9]{9}" placeholder="3xxxxxxxxx" class="form-control" required />
+                </label>
+                <label for="correo" class="d-block mb-3">Correo
+                    <input id="correo" name="correo" type="email" class="form-control" required />
+                </label>
+                <label for="especializacion" class="d-block mb-3">Especialización
+                    <select id="especializacion" name="especializacion" class="form-select">
+                        <option value="">Seleccione la especialización</option>
+                        <option value="Ortodoncia">Ortodoncia</option>
+                        <option value="atencionGeneral">Atención General</option>
+                        <option value="estetica">Estética</option>
+                    </select>
+                </label>
+                <label for="password" class="d-block mb-3">Contraseña
+                    <input id="password" name="password" type="password" placeholder="********" class="form-control" required />
+                </label>
+                <div class="d-flex justify-content-end gap-2">
+                    <button id="btnConsultar" type="button"  class="btn btn-primary">Consultar</button>
+                    <button id="btnRegistrar" type="submit"  class="btn btn-primary">Registrar</button>
+                    <button id="btnActualizar" type="submit"  class="btn btn-primary">Actualizar</button>
+                    <button id="btnEliminar" type="submit"  class="btn btn-primary">Eliminar</button>
+                    <button id="btnCancelar" type="button" class="btn btn-secondary" onclick="cancelar()">Cancelar</button>
+                </div>
+            </form>
+            <script>
+                function CerrarSesion(){
+                    alert("Sesión Cerrada \n Usted ha salido del sistema exitosamente");
+                    window.location.href="Login.html"
+                }
+                function cancelar(){
+                    document.querySelector("form").reset();
+                }
+            </script>
+        </div>
+    </div>
+</body>
+</html>
