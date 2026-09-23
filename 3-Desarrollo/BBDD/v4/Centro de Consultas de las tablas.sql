@@ -1,0 +1,24 @@
+--- Consultas de todas las Tablas de SICAC ---
+select *from administrador;
+select *from alergia;
+select *from autorizacion;
+select *from autorizacion_cliente;
+select *from cirugia_previa;
+select *from cita;
+select *from cliente;
+select *from enfermedad_sistemica;
+select *from historial_alergia;
+select *from historial_cirugia;
+select *from historial_enfermedad;
+select *from historial_medicamento;
+select *from historial_medico;
+select *from mapa_dental;
+select *from medicamento; 
+select *from metodo_pago;
+select *from odontologo;
+select *from paciente; 
+select *from pago;
+select *from pieza_dental;
+select *from servicio;
+select *from tipo_documento;
+select *from tratamiento; 
