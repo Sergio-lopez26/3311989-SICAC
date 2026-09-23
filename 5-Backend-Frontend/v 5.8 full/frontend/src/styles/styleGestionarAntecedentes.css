@@ -1,0 +1,30 @@
+/* styleGestionarAntecedentes.css */
+
+body, p, span, a, label, input, select, textarea, table, th, td, small {
+  font-family: Georgia, serif;
+}
+
+.titulo-gestion {
+  color: #103e6e;
+  font-weight: bolder;
+}
+
+.paciente-seleccionado {
+  background-color: #103e6e !important;
+  color: white;
+  border-radius: 16px !important;
+  border: none;
+}
+
+.input-estilizado {
+  border: 2px solid #d0e2ff !important;
+  border-radius: 12px !important;
+}
+
+.btn-redondeado {
+  border-radius: 12px !important;
+}
+
+.card-antecedentes {
+  border-radius: 16px !important;
+}
