@@ -1,0 +1,87 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d9ecff;
+    color: #103e6e;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+header {
+    background-color: #d9ecff;
+    width: 100%;
+    justify-content: center;
+}
+
+#logo {
+    height: 60px;
+    width: 80px;
+}
+
+h1 {
+    color: #103e6e;
+    font-weight: bolder;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    color: #103e6e;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+label {
+    font-weight: 600;
+    color: #103e6e;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 14px;
+}
+
+input, select {
+    background-color: rgba(0, 0, 0, 0.06);
+    border: 3px solid #d0e2ff;
+    border-radius: 12px;
+    font-size: 12px;
+    color: #000000;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: #96baf3;
+    outline: none;
+}
+
+button {
+    border-radius: 15px;
+    border: none;
+    background-color: #cdcdf7;
+    color: #103e6e;
+    font-size: 14px;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    border: 5px solid #a8a8f7;
+}
+
+#btnRegistrar {
+    background-color: rgb(25, 145, 25); 
+}
+
+#btnActualizar {
+    background-color: rgb(39, 39, 171); 
+}
+
+#btnEliminar {
+    background-color: rgb(201, 40, 40);
+}
+
+#btnCancelar {
+    background-color: grey; 
+}
