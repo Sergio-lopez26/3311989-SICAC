@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesRegistro.css">
+    <link rel="icon" type="image/x-icon" href="LogoIcono.png">
+    <title>Registro de Clientes</title>
+</head>
+<header>
+  <img id="logo" src="logo.png" alt="Logo">
+  <h1>Registro de Clientes</h1>
+  <p>Por favor completar los campos con sus respectivos datos</p>
+</header>
+<body>
+  <form id="formRegistro" action="Login.html" method="post">
+    <label for="tipoDocumento">Tipo de Documento
+      <select id="tipoDocumento" name="tipoDocumento" required >
+        <option value="cc" selected>Cédula de Ciudadanía</option>
+        <option value="ti">Tarjeta de Identidad</option>
+        <option value="ce">Cédula de Extranjería</option>
+      </select>
+    </label>
+    <label for="numDocumento">Número de Documento 
+      <input id="numDocumento" name="numDocumento" type="text" required />
+    </label>
+    <label for="fechaNto">Fecha de Nacimiento
+      <input id="fechaNto" name="fechaNto" type="date" required />
+    </label>
+    <label for="primerNombre">Primer Nombre 
+      <input id="primerNombre" name="primerNombre" type="text" required />
+    </label>
+    <label for="segundoNombre">Segundo Nombre 
+      <input id="segundoNombre" name="segundoNombre" type="text" required />
+    </label>
+    <label for="primerApellido">Primer Apellido 
+      <input id="primerApellido" name="primerApellido" type="text" required />
+    </label>
+    <label for="segundoApellido">Segundo Apellido 
+      <input id="segundoApellido" name="segundoApellido" type="text" required />
+    </label>
+    <label for="numCel">Número de Celular 
+      <input id="numCel" name="numCel" type="tel" pattern="3[0-9]{9}" placeholder="3xxxxxxxxx" required />
+    </label>
+    <label for="email">Email 
+      <input id="email" name="email" type="email" required />
+    </label>
+    <label for="RH">Tipo de Sangre (RH)
+      <select id="RH" name="RH" required >
+        <option value="A+">A+</option>
+        <option value="A-">A-</option>
+        <option value="B+">B+</option>
+        <option value="B-">B+</option>
+        <option value="AB+">AB+</option>
+        <option value="AB-">AB-</option>
+        <option value="O+" selected>O+</option>
+        <option value="O-">O-</option>
+      </select>
+    </label>
+    <label for="password">Contraseña
+      <input id="password" name="password" type="password" placeholder="********" required /> <!--pattern=".{8,}"= se admitiran minimo 8 caracteres-->
+    </label>
+    <label for="confirmarpassword">Confirmar Contraseña 
+      <input id="confirmarpassword" name="confirmarpassword" type="password" placeholder="********" required />
+    </label>
+    <div class="botones">
+      <button type="submit" onclick="validaContraseña()">Registrarse</button>
+      <button type="button" onclick="cancelar()">Cancelar</button>
+    </div>
+  </form>
+  <script>
+    function validaContraseña(){
+
+      event.preventDefault(); //funcion para evitar que se resetee el form
+      const pass = document.getElementById("password").value;
+      const valida = document.getElementById("confirmarpassword").value;
+
+      if(pass.length < 8){
+        alert("La contraseña debe tener mínimo 8 caractéres");
+        document.getElementById("password").style.border = "2px solid red";
+        return;
+      }
+      if (pass !== valida){
+        alert("La contraseña no coincide");
+        document.getElementById("password").value = ""; //"resetea el input en cuestion al momento de darle aceptar al alert"
+        document.getElementById("confirmarpassword").value = "";
+
+        document.getElementById("password").focus(); //Enfoca este input al darle aceptar al alert
+      }
+      else{
+        alert("Registrado \n Usted ha sido registrado en el sistema exitosamente");
+        window.location.href="Login.html";
+      }
+    }
+
+    function cancelar(){
+      document.querySelector("form").reset();
+    }
+  </script>
+</body>
+</html>
