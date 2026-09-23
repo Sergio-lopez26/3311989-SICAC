@@ -1,0 +1,51 @@
+
+.titulo-principal {
+  color: #103e6e;
+  font-weight: bolder;
+}
+
+.buscador-lista {
+  z-index: 1000;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.item-cursor {
+  cursor: pointer;
+}
+
+.card-paciente-seleccionado {
+  background-color: #103e6e;
+  border-radius: 12px;
+}
+
+.card-formulario {
+  border-radius: 16px;
+  margin-bottom: 30px;
+}
+
+.input-custom {
+  border: 2px solid #d0e2ff !important;
+  border-radius: 12px !important;
+}
+
+.input-group-custom-left {
+  border: 2px solid #d0e2ff !important;
+  border-radius: 12px 0 0 12px !important;
+}
+
+.btn-group-custom-right {
+  border-radius: 0 12px 12px 0 !important;
+}
+
+.modal-content-custom {
+  border-radius: 16px;
+}
+
+.modal-titulo {
+  color: #103e6e;
+}
+
+.btn-redondeado {
+  border-radius: 12px !important;
+}
