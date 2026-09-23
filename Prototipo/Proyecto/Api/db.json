@@ -1,0 +1,262 @@
+{
+  "tipo_documento": [
+    {
+      "id": 1,
+      "sigla": "CC",
+      "nombre_documento": "Cédula de Ciudadanía",
+      "estado": "Activo"
+    },
+    {
+      "id": 2,
+      "sigla": "TI",
+      "nombre_documento": "Tarjeta de Identidad",
+      "estado": "Activo"
+    },
+    {
+      "id": 3,
+      "sigla": "CE",
+      "nombre_documento": "Cédula de Extranjería",
+      "estado": "Activo"
+    }
+  ],
+  "autorizacion": [
+    {
+      "rol": "Administrador"
+    },
+    {
+      "rol": "Odontologo"
+    },
+    {
+      "rol": "Paciente"
+    }
+  ],
+  "servicio": [
+    {
+      "id": 1,
+      "nombre": "Limpieza Dental",
+      "descripcion": "Limpieza y profilaxis",
+      "precio_actual": 80000,
+      "duracion": "00:45:00"
+    },
+    {
+      "id": 2,
+      "nombre": "Ortodoncia",
+      "descripcion": "Control de ortodoncia",
+      "precio_actual": 120000,
+      "duracion": "01:00:00"
+    }
+  ],
+  "metodo_pago": [
+    {
+      "id": 1,
+      "nombre_metodo": "Efectivo"
+    },
+    {
+      "id": 2,
+      "nombre_metodo": "Nequi"
+    },
+    {
+      "id": 3,
+      "nombre_metodo": "Tarjeta"
+    }
+  ],
+  "alergia": [
+    {
+      "id": 1,
+      "nombre": "Penicilina"
+    },
+    {
+      "id": 2,
+      "nombre": "Polen"
+    }
+  ],
+  "enfermedad_sistemica": [
+    {
+      "id": 1,
+      "nombre": "Hipertensión"
+    },
+    {
+      "id": 2,
+      "nombre": "Diabetes"
+    }
+  ],
+  "cirugia_previa": [
+    {
+      "id": 1,
+      "nombre": "Extracción de cordales"
+    }
+  ],
+  "medicamento": [
+    {
+      "id": 1,
+      "nombre": "Ibuprofeno"
+    },
+    {
+      "id": 2,
+      "nombre": "Amoxicilina"
+    }
+  ],
+  "users": [
+    {
+      "email": "martinezzambrano96@gmail.com",
+      "password": "$2a$10$bgXO1EebRXCuaFyWkSzrUu76xKAg2132VKYsWtik5gqNToSeFwLq6",
+      "id_rol": 1,
+      "id_tipo_documento": 1,
+      "numero_documento": "1013122199",
+      "primer_nombre": "juan",
+      "segundo_nombre": "camilo",
+      "primer_apellido": "martinez",
+      "segundo_apellido": "zambrano",
+      "fecha_nacimiento": "2003-06-10",
+      "numero_celular": "3224396712",
+      "tipo_sangre": "O+",
+      "nombre_acudiente": "",
+      "documento_acudiente": "",
+      "id": 1
+    },
+    {
+      "email": "admin@gmail.com",
+      "password": "$2a$10$6RzoIzKwZxdMGG.Sb2CewuwQIvhXYqopsghF5FyEKR0L/nYhbL5ne",
+      "id_rol": 1,
+      "id_tipo_documento": 1,
+      "numero_documento": "1023998275",
+      "primer_nombre": "Carlos",
+      "segundo_nombre": "Alberto",
+      "primer_apellido": "perez",
+      "segundo_apellido": "ruiz",
+      "fecha_nacimiento": "2003-06-17",
+      "numero_celular": "3124596916",
+      "tipo_sangre": "O+",
+      "nombre_acudiente": "",
+      "documento_acudiente": "",
+      "id": 2
+    },
+    {
+      "email": "paciente1@gmail.com",
+      "password": "$2a$10$JEYt2WqVZtpkg4zn05p9q.4uG4KQXGBdztvsS6UNsK7S4X2zTRHFi",
+      "id_rol": 3,
+      "id_tipo_documento": 1,
+      "numero_documento": "1014389534",
+      "primer_nombre": "juan",
+      "segundo_nombre": "Andres",
+      "primer_apellido": "torres",
+      "segundo_apellido": "herrera",
+      "fecha_nacimiento": "2006-06-12",
+      "numero_celular": "3224195902",
+      "tipo_sangre": "O+",
+      "nombre_acudiente": "",
+      "documento_acudiente": "",
+      "id": 3
+    },
+    {
+      "email": "odontologo1@gmail.com",
+      "password": "$2a$10$HnA1qtHcZht5XNs.8UGGc.odPv.jDHglTFKnBfTcS.SwlMm4ogyuK",
+      "id_rol": 2,
+      "id_tipo_documento": 1,
+      "numero_documento": "1013958338",
+      "primer_nombre": "raul",
+      "segundo_nombre": "emilio",
+      "primer_apellido": "sanchez",
+      "segundo_apellido": "rodriguez",
+      "fecha_nacimiento": "2003-06-10",
+      "numero_celular": "3124946916",
+      "tipo_sangre": "O+",
+      "nombre_acudiente": "",
+      "documento_acudiente": "",
+      "id": 4
+    }
+  ],
+  "autorizacion_usuario": [
+    {
+      "id": 1,
+      "rol": "Administrador"
+    },
+    {
+      "id": 2,
+      "rol": "Odontologo"
+    },
+    {
+      "id": 3,
+      "rol": "Paciente"
+    }
+  ],
+  "administrador": [
+    {
+      "id": 1
+    }
+  ],
+  "odontologo": [
+    {
+      "id_usuario": 4,
+      "fecha_registro": "2026-07-22",
+      "especializacion": "ortodoncia",
+      "estado": "Activo",
+      "id": 3
+    }
+  ],
+  "paciente": [
+    {
+      "id_usuario": 3,
+      "fecha_registro": "2026-07-15",
+      "estado": "Activo",
+      "id": 6
+    }
+  ],
+  "mapa_dental": [
+    {
+      "id": 1,
+      "id_paciente": 3
+    }
+  ],
+  "pieza_dental": [
+    {
+      "id": 1,
+      "id_mapa_dental": 1,
+      "numero_pieza": 11,
+      "estado": "Sana"
+    }
+  ],
+  "historial_medico": [
+    {
+      "id": 1,
+      "id_paciente": 3,
+      "observaciones": "Paciente sin antecedentes importantes."
+    }
+  ],
+  "cita": [
+    {
+      "id": 1,
+      "id_paciente": 3,
+      "id_odontologo": 2,
+      "id_servicio": 1,
+      "fecha": "2026-07-10",
+      "hora": "08:00:00",
+      "estado": "Programada"
+    }
+  ],
+  "pago": [
+    {
+      "id": 1,
+      "id_cita": 1,
+      "id_metodo_pago": 1,
+      "valor": 80000
+    }
+  ],
+  "tratamiento": [
+    {
+      "id": 1,
+      "id_cita": 1,
+      "descripcion": "Limpieza realizada correctamente."
+    }
+  ],
+  "historial_alergia": [
+    {
+      "id": 1,
+      "id_historial_medico": 1,
+      "id_alergia": 1
+    }
+  ],
+  "historial_enfermedad": [],
+  "historial_medicamento": [],
+  "historial_cirugia": []
+}
