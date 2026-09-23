@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stylesLogin.css">
+    <link rel="icon" type="image/x-icon" href="LogoIcono.png">
+    <title>Iniciar Sesión</title>
+</head>
+<body>
+    <header>
+  <img id="logo" src="logo.png" alt="Logo">
+  <h1>Iniciar Sesión</h1>
+  <p>Por favor completar los campos con sus respectivos datos</p>
+</header>
+<body>
+  <form id="formLogin" action="#" method="post">
+    <label for="email">Email 
+      <input id="email" name="email" type="email" required />
+    </label>
+    <label for="password">Contraseña
+      <input id="password" name="password" type="password" placeholder="********" required /> <!--pattern=".{8,}"= se admitiran minimo 8 caracteres-->
+    </label>
+    <div class="botones">
+      <button type="submit" onclick="validaContraseña()">Ingresar</button>
+      <button type="button" onclick="cancelar()">Cancelar</button>
+    </div>
+  </form>
+  <script>
+    function validaContraseña(){
+
+        event.preventDefault();
+        const pass = document.getElementById("password").value;
+        
+        if(pass.length < 8){
+        alert("La contraseña debe tener mínimo 8 caractéres");
+        document.getElementById("password").style.border = "2px solid red";
+        return;
+        }
+        else{
+            alert("Credenciales Validadas \n Usted ha ingresado al sistema exitosamente");
+            document.getElementById("email").value = "";
+            document.getElementById("password").value = "";
+
+            window.location.href = "Odontologo.html";
+        }
+    }
+
+    function cancelar(){
+        window.location.href="Registro.html"
+    }
+  </script>
+</body>
+</html>
