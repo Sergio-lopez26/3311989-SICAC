@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d9ecff;
+    color: #103e6e;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+#logo {
+    height: 60px;
+    width: 80px;
+    margin-top: 10px;
+}
+
+header {
+    flex-direction: column; /* Alinea el h1 y el p uno sobre el otro */
+    justify-content: center; /* Centrar Verticalmente */
+    align-items: center;    /* Centrar Horizontalmente */
+    text-align: center;
+    background-color: #d9ecff;
+    width: 100%;
+}
+
+h1 {
+    padding-top: 20px;
+    color: #103e6e;
+    font-weight: bolder;
+    font-size: 40px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    color: #103e6e;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 20px;
+}
+
+.table th {
+    white-space: nowrap;
+}
+
+#btnConsultar:hover {
+    border: 5px solid rgb(9, 70, 161); 
+}
+
+#btnRegistrar:hover {
+    border: 5px solid rgb(16, 90, 16); 
+}
+
+#btnActualizar:hover {
+    border: 5px solid rgb(28, 28, 122); 
+}
+
+#btnEliminar:hover {
+    border: 5px solid rgb(170, 34, 34);
+}
+
+#btnCancelar:hover {
+    border: 5px solid rgb(114, 113, 113);
+}
+
+#btnBuscar:hover {
+    border: 2px solid rgb(108, 117, 125)
+}
+
+#btnConsultar{
+    background-color: rgb(13, 110, 253);
+}
+
+#btnRegistrar {
+    background-color: rgb(25, 145, 25); 
+}
+
+#btnActualizar {
+    background-color: rgb(39, 39, 171); 
+}
+
+#btnEliminar {
+    background-color: rgb(201, 40, 40);
+}
+
+#btnCancelar {
+    background-color: grey; 
+}
+
+section:target{
+    display: inline-block;
+}

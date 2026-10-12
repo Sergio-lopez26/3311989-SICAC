@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="icon" type="image/x-icon" href="LogoIcono.png">
+    <link rel="stylesheet" href="stylesPaciente.css">
+    <title>Pacientes</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark" style="height: 60px;">
+        <div class="container-fluid">
+            <img id="logo" src="logo.png" alt="Logo">
+            <a class="navbar-brand">SICAC</a>
+            <div class="collapse navbar-collapse" id="navbarColor01">
+            <ul class="navbar-nav me-auto">
+                <li class="nav-item">
+                <a class="nav-link active" href="Odontologo.html">Odontólogos</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="Paciente.html">Pacientes</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" href="Servicio.html">Servicios</a>
+                </li>
+            </ul>
+            <form class="d-flex">
+                <input class="form-control me-sm-2" type="search" placeholder="Buscar" style="background-color: rgb(248, 248, 250);">
+                <button id="btnBuscar" class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button>
+            </form>
+            <button class="btn btn-primary" onclick="CerrarSesion()" style="margin: 30px;">Cerrar Sesión</button>
+            </div>
+        </div>
+    </nav>
+    <header>
+        <h1>Pacientes</h1>
+        <p>Por favor completar los campos con sus respectivos datos</p>
+    </header>
+
+    <div class="container-fluid mt-4"> <!--el -fluid permite que el div se pueda "anchar" y ocupar todo el ancho de la página, siempre que lo requiera -->
+        <div class="d-flex flex-nowrap justify-content-center gap-4"> <!--flex-nowrap: Prohibe a los elementos irse para abajo-->
+            <div class="card shadow p-4" style="max-width: 600px; flex-shrink: 0; margin-bottom: 30px;">
+                <form id="formPaciente" action="" method="post">
+                    <label for="tipoDocumento" class="d-block mb-3">Tipo de documento
+                    <select name="tipoDocumento" id="tipo-documento" class="form-select" style="border: 2px solid #d0e2ff; border-radius: 12px;" required>
+                        <option value="#" selected>Seleccione el tipo de documento</option>
+                        <option value="cc">CC</option>C</option>
+                        <option value="ti">TI</option>
+                        <option value="ce">CE</option>
+                    </select>
+                    </label>
+                    <label for="numeroDocumento" class="d-block mb-3">Numero de documento
+                    <input type="number" name="numeroDocumento" id="numero-documento" class="form-control" style="border: 2px solid #d0e2ff; border-radius: 12px;" required>
+                    </label>
+                    <label for="fecha-nacimiento" class="d-block mb-3">Fecha de nacimiento
+                    <input type="date" name="fecha-nacimiento" id="fecha-nacimiento" class="form-control" style="border: 2px solid #d0e2ff; border-radius: 12px;" required>
+                    </label>
+                    <label for="primer-nombre" class="d-block mb-3">Primer nombre
+                    <input type="text" name="primer-nombre" id="primer-nombre" class="form-control" style="border: 2px solid #d0e2ff; border-radius: 12px;" required>
+                    </label>
+                    <label for="segundo-nombre" class="d-block mb-3">Segundo nombre
+                    <input type="text" name="segundo-nombre" id="segundo-nombre" class="form-control" style="border: 2px solid #d0e2ff; border-radius: 12px;">
+                    </label>
+                    <label for="primer-apellido" class="d-block mb-3">Primer apellido
+                    <input type="text" name="primer-apellido" id="primer-apellido" class="form-control" style="border: 2px solid #d0e2ff; border-radius: 12px;" required>
+                    </label>
+                    <label for="segundo-apellido" class="d-block mb-3">Segundo apellido
+                    <input type="text" name="segundo-apellido" id="segundo-apellido" class="form-control" style="border: 2px solid #d0e2ff; border-radius: 12px;">
+                    </label>
+                    <label for="telefono" class="d-block mb-3">Número de Celular
+                    <input type="tel" name="Telefono" id="telefono" class="form-control" pattern="3[0-9]{9}" placeholder="3xxxxxxxxx" style="border: 2px solid #d0e2ff; border-radius: 12px;" required>
+                    </label>
+                    <label for="correo" class="d-block mb-3">Correo
+                    <input type="email" name="correo" id="correo" class="form-control" style="border: 2px solid #d0e2ff; border-radius: 12px;" required>
+                    </label>
+                    <label for="tipo-sangre" class="d-block mb-3">Tipo de sangre
+                    <select name="tipo-sangre" id="tipo-sangre" class="form-select" style="border: 2px solid #d0e2ff; border-radius: 12px;">
+                        <option value="o-">O-</option>
+                        <option value="o+" selected>O+</option>
+                        <option value="a-">A-</option>
+                        <option value="a+">A+</option>
+                        <option value="b-">B-</option>
+                        <option value="b+">B+</option>
+                        <option value="ab-">AB-</option>
+                        <option value="ab+">AB+</option>
+                    </select>
+                    </label>
+                    <label for="password" class="d-block mb-3" >Contraseña
+                    <input type="password" name="password" id="password" placeholder="********" class="form-control" style="border: 2px solid #d0e2ff; border-radius: 12px;" minlength="8" required>
+                    </label>
+                    <div class="d-flex justify-content-end gap-2">
+                        <a id="btnConsultar" href="#TablaPaciente" class="btn btn-primary" onclick="document.getElementById('TablaPaciente').style.display='inline-block';">Consultar</a> <!--inline-block: Hace que el section se ponga "en linea" a nivel de bloque con el table-->
+                        <button id="btnRegistrar" type="submit"  class="btn btn-primary">Registrar</button>
+                        <button id="btnActualizar" type="submit"  class="btn btn-primary">Actualizar</button>
+                        <button id="btnEliminar" type="submit"  class="btn btn-primary">Eliminar</button>
+                        <button id="btnCancelar" type="button" class="btn btn-secondary" onclick="cancelar()">Cancelar</button>
+                    </div>
+                </form>
+            </div>
+            <script>
+                function CerrarSesion(){
+                    alert("Sesión Cerrada \n Usted ha salido del sistema exitosamente");
+                    window.location.href="Login.html"
+                }
+                function cancelar(){
+                    document.querySelector("#formPaciente").reset();
+                    document.getElementById("TablaPaciente").style.display="none";
+                    window.location.hash = "";
+                }
+            </script>
+            <section id="TablaPaciente" class="flex-grow-1" style="display: none; overflow-x: auto; min-width: 0; max-height: 80vh; align-self: flex-start;">
+                <table id="tPaciente" class="table table-striped mb-0" style="margin-top: 20px; border: 5px solid rgb(107, 166, 255)">
+                    <thead class="table-light">
+                        <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Tipo de Documento</th>
+                        <th scope="col">Número de Documento</th>
+                        <th scope="col">Fecha de Documento</th>
+                        <th scope="col">Primer Nombre</th>
+                        <th scope="col">Segundo Nombre</th>
+                        <th scope="col">Primer Apellido</th>
+                        <th scope="col">Segundo Apellido</th>
+                        <th scope="col">Número de Celular</th>
+                        <th scope="col">Correo</th>
+                        <th scope="col">Tipo de Sangre</th>
+                        <th scope="col">Contraseña</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                        <th scope="row">1</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">2</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                        <tr>
+                        <th scope="row">3</th>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </div>
+</body>
+</html>

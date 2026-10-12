@@ -1,0 +1,10 @@
+#btnbuscar{
+    margin-left:8%;
+    width: 12em;
+    height: 3em;
+    border-radius: 10px;
+    border: 2px solid lightblue;
+}
+.usuarios{
+    margin-left:150px;
+}
