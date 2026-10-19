@@ -1,0 +1,31 @@
+body, p, span, a, label, input, select, table, th, td, small {
+  font-family: Georgia, serif;
+}
+
+.titulo-historial {
+  color: #103e6e;
+  font-weight: bolder;
+}
+
+.card-antecedentes {
+  border-radius: 16px;
+}
+
+.card-header-antecedentes {
+  border-radius: 16px 16px 0 0 !important;
+  background-color: #103e6e !important;
+}
+
+.card-diagnosticos {
+  border-radius: 16px;
+}
+
+.card-header-diagnosticos {
+  border-radius: 16px 16px 0 0 !important;
+}
+
+.tabla-borde-custom {
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 10px;
+  overflow: hidden;
+}
