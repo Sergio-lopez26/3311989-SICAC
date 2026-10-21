@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1792181899558" clover="3.2.0">
+  <project timestamp="1792181899558" name="All files">
+    <metrics statements="95" coveredstatements="95" conditionals="45" coveredconditionals="45" methods="11" coveredmethods="11" elements="151" coveredelements="151" complexity="0" loc="95" ncloc="95" packages="1" files="2" classes="2"/>
+    <file name="metodo_pago.js" path="C:\Users\sergi\OneDrive\Desktop\Proyecto Sicac\backend\routes\metodo_pago.js">
+      <metrics statements="43" coveredstatements="43" conditionals="16" coveredconditionals="16" methods="5" coveredmethods="5"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="7" count="1" type="stmt"/>
+      <line num="8" count="10" type="stmt"/>
+      <line num="11" count="10" type="cond" truecount="2" falsecount="0"/>
+      <line num="12" count="2" type="stmt"/>
+      <line num="16" count="8" type="stmt"/>
+      <line num="19" count="1" type="stmt"/>
+      <line num="21" count="1" type="stmt"/>
+      <line num="22" count="2" type="stmt"/>
+      <line num="23" count="2" type="stmt"/>
+      <line num="24" count="1" type="stmt"/>
+      <line num="26" count="1" type="stmt"/>
+      <line num="30" count="1" type="stmt"/>
+      <line num="31" count="4" type="stmt"/>
+      <line num="32" count="4" type="stmt"/>
+      <line num="34" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="35" count="1" type="stmt"/>
+      <line num="38" count="3" type="stmt"/>
+      <line num="43" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="44" count="1" type="stmt"/>
+      <line num="47" count="1" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="57" count="1" type="stmt"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="62" count="1" type="stmt"/>
+      <line num="63" count="4" type="stmt"/>
+      <line num="64" count="4" type="stmt"/>
+      <line num="66" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="67" count="1" type="stmt"/>
+      <line num="70" count="3" type="stmt"/>
+      <line num="75" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="76" count="1" type="stmt"/>
+      <line num="79" count="1" type="stmt"/>
+      <line num="81" count="1" type="stmt"/>
+      <line num="85" count="1" type="stmt"/>
+      <line num="86" count="5" type="stmt"/>
+      <line num="87" count="5" type="stmt"/>
+      <line num="89" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="90" count="1" type="stmt"/>
+      <line num="93" count="1" type="stmt"/>
+      <line num="95" count="3" type="cond" truecount="4" falsecount="0"/>
+      <line num="96" count="2" type="stmt"/>
+      <line num="98" count="1" type="stmt"/>
+    </file>
+    <file name="pago.js" path="C:\Users\sergi\OneDrive\Desktop\Proyecto Sicac\backend\routes\pago.js">
+      <metrics statements="52" coveredstatements="52" conditionals="29" coveredconditionals="29" methods="6" coveredmethods="6"/>
+      <line num="4" count="1" type="stmt"/>
+      <line num="6" count="1" type="stmt"/>
+      <line num="29" count="1" type="stmt"/>
+      <line num="30" count="2" type="stmt"/>
+      <line num="31" count="2" type="stmt"/>
+      <line num="32" count="1" type="stmt"/>
+      <line num="34" count="1" type="stmt"/>
+      <line num="39" count="1" type="stmt"/>
+      <line num="40" count="2" type="stmt"/>
+      <line num="41" count="2" type="stmt"/>
+      <line num="45" count="1" type="stmt"/>
+      <line num="47" count="1" type="stmt"/>
+      <line num="52" count="1" type="stmt"/>
+      <line num="53" count="2" type="stmt"/>
+      <line num="54" count="2" type="stmt"/>
+      <line num="58" count="1" type="stmt"/>
+      <line num="60" count="1" type="stmt"/>
+      <line num="64" count="1" type="stmt"/>
+      <line num="65" count="8" type="stmt"/>
+      <line num="73" count="8" type="stmt"/>
+      <line num="75" count="8" type="cond" truecount="6" falsecount="0"/>
+      <line num="76" count="1" type="stmt"/>
+      <line num="79" count="7" type="cond" truecount="2" falsecount="0"/>
+      <line num="80" count="1" type="stmt"/>
+      <line num="83" count="6" type="stmt"/>
+      <line num="84" count="5" type="cond" truecount="2" falsecount="0"/>
+      <line num="85" count="1" type="stmt"/>
+      <line num="89" count="4" type="cond" truecount="4" falsecount="0"/>
+      <line num="93" count="4" type="stmt"/>
+      <line num="97" count="4" type="cond" truecount="2" falsecount="0"/>
+      <line num="98" count="1" type="stmt"/>
+      <line num="101" count="3" type="stmt"/>
+      <line num="107" count="3" type="stmt"/>
+      <line num="112" count="1" type="stmt"/>
+      <line num="113" count="1" type="stmt"/>
+      <line num="117" count="1" type="stmt"/>
+      <line num="118" count="4" type="stmt"/>
+      <line num="125" count="4" type="stmt"/>
+      <line num="127" count="4" type="cond" truecount="7" falsecount="0"/>
+      <line num="128" count="1" type="stmt"/>
+      <line num="131" count="3" type="stmt"/>
+      <line num="142" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="143" count="1" type="stmt"/>
+      <line num="146" count="1" type="stmt"/>
+      <line num="148" count="1" type="stmt"/>
+      <line num="152" count="1" type="stmt"/>
+      <line num="153" count="3" type="stmt"/>
+      <line num="154" count="3" type="stmt"/>
+      <line num="156" count="2" type="cond" truecount="2" falsecount="0"/>
+      <line num="157" count="1" type="stmt"/>
+      <line num="160" count="1" type="stmt"/>
+      <line num="162" count="1" type="stmt"/>
+    </file>
+  </project>
+</coverage>
