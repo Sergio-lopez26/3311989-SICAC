@@ -89,6 +89,23 @@ describe('Pruebas de Caja Blanca - Servicio', () => {
     expect(pool.query.mock.calls[1][1]).toEqual([1, 1, 'Limpieza dental', 'Profilaxis', 50000]);
   });
 
+  //Si no se envía el procedimiento, el backend lo guarda como texto vacío
+  test('POST / debe guardar el procedimiento vacío si no se envía', async () => {
+    pool.query
+      .mockResolvedValueOnce([[{ precio_actual: 50000 }]]) //El tipo de servicio existe y tiene este precio
+      .mockResolvedValueOnce([{ affectedRows: 1 }]); //Insert OK
+
+    const res = await request(app).post('/servicio').send({
+      id_tipo_servicio: 1,
+      id_diagnostico: 1,
+      nombre_servicio: 'Limpieza dental'
+    });
+
+    expect(res.statusCode).toBe(201);
+    //El cuarto parámetro del INSERT es el procedimiento
+    expect(pool.query.mock.calls[1][1][3]).toBe('');
+  });
+
   //PUT/id
   test('PUT / debe rechazar si faltan campos para actualizar', async () => {
     const res = await request(app)
@@ -126,6 +143,22 @@ describe('Pruebas de Caja Blanca - Servicio', () => {
 
     expect(res.statusCode).toBe(200);
     expect(res.body.mensaje).toBe('Servicio actualizado exitosamente');
+  });
+
+  //Si no se envía el procedimiento al actualizar, el backend lo guarda como texto vacío
+  test('PUT / debe guardar el procedimiento vacío si no se envía', async () => {
+    pool.query.mockResolvedValueOnce([{ affectedRows: 1 }]);
+
+    const res = await request(app).put('/servicio/1').send({
+      id_tipo_servicio: 1,
+      id_diagnostico: 1,
+      nombre_servicio: 'Limpieza dental',
+      precio_aplicado: 60000
+    });
+
+    expect(res.statusCode).toBe(200);
+    //El cuarto parámetro del UPDATE es el procedimiento
+    expect(pool.query.mock.calls[0][1][3]).toBe('');
   });
 
   //DELETE/:id
