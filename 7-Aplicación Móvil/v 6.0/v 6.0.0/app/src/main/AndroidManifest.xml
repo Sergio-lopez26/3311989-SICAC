@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Permisos esenciales de red para conectar con la api en Laravel -->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+            android:allowBackup="true"
+            android:dataExtractionRules="@xml/data_extraction_rules"
+            android:fullBackupContent="@xml/backup_rules"
+            android:label="@string/app_name"
+            android:supportsRtl="true"
+            android:theme="@style/Theme.Sicac"
+            tools:targetApi="31"
+            android:usesCleartextTraffic="true"> <!-- Permite el tráfico HTTP local -->
+
+        <!-- Esto para el login (ahora como arranque de la simulacion) -->
+        <activity
+                android:name=".LoginActivity.activityLogin"
+                android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Esto para el menú (logueado correctamente) -->
+        <activity
+                android:name=".MenuActivity.activityMenu"
+                android:exported="false" />
+
+        <!-- Esto ya es para que MAIN ACTIVITY pase a ser secundaria) -> PEro si algo lo podemos quitar despues, no creo que lo usemos -->
+        <activity
+                android:name=".MainActivity"
+                android:exported="false" />
+
+    </application>
+
+</manifest>

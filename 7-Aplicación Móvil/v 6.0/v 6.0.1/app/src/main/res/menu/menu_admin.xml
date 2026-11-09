@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+      xmlns:app="http://android.com">
+
+    <!-- Botón normal para ir al inicio -->
+    <item
+        android:id="@+id/nav_inicio"
+        android:icon="@drawable/ic_home"
+        android:title="Inicio" />
+
+    <!-- Opción con interruptor (Toggle) -->
+    <item
+        android:id="@+id/nav_toggle_pacientes"
+        android:icon="@android:drawable/ic_menu_agenda"
+        android:title="Gestionar Pacientes"
+        app:actionViewClass="com.google.android.material.switchmaterial.SwitchMaterial" />
+
+</menu>
+
