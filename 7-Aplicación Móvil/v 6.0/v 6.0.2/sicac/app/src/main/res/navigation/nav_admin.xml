@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_admin"
+            app:startDestination="@id/nav_inicio">
+
+    <!-- Inicio -->
+    <fragment
+            android:id="@+id/nav_inicio"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Inicio"/>
+
+    <!-- Menú Pacientes -->
+    <fragment
+            android:id="@+id/nav_ver_pacientes"
+            android:name="com.example.sicac.ui.GestionarPacientes"
+            android:title="Pacientes ▴"/>
+
+    <!-- Menú Médicos -->
+    <fragment
+            android:id="@+id/nav_medicos"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Medicos ▴"/>
+
+    <!-- Menú Usuarios -->
+    <fragment
+            android:id="@+id/nav_usuarios"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Usuarios ▴"/>
+
+</navigation>

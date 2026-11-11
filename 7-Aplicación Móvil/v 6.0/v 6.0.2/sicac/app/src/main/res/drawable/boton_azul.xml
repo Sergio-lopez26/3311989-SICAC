@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+        android:shape="rectangle">
+
+        <!-- Color de fondo azul -->
+        <solid android:color="#005EE6" />
+
+        <!-- Radio de las esquinas redondeadas -> Tal como en bootstrap con las clases, pero aca si toca como css (parecido) -->
+        <corners android:radius="8dp" />
+</shape>
