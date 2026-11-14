@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_admin"
+            app:startDestination="@id/nav_inicio">
+
+    <!-- Inicio -->
+    <fragment
+            android:id="@+id/nav_inicio"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Inicio"/>
+
+    <!-- Menú Pacientes -->
+    <fragment
+            android:id="@+id/nav_gestionar_pacientes"
+            android:name="com.example.sicac.ui.GestionarPacientes"
+            android:title="Pacientes ▴"/>
+
+    <!-- Menú Médicos -->
+    <fragment
+            android:id="@+id/nav_registrar_medico"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Médicos ▴"/>
+    <fragment
+            android:id="@+id/nav_gestionar_medicos"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Médicos ▴"/>
+
+    <!-- Menú Usuarios -->
+    <fragment
+            android:id="@+id/nav_gestionar_t_documento"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Usuarios ▴"/>
+    <fragment
+            android:id="@+id/nav_gestionar_roles"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Usuarios ▴"/>
+    <fragment
+            android:id="@+id/nav_gestionar_rol_usuario"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Usuarios ▴"/>
+
+    <!-- Menú Odontología y Servicios -->
+    <fragment
+            android:id="@+id/nav_gestionar_m_dentales"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Odontología y Servicios ▴"/>
+    <fragment
+            android:id="@+id/nav_gestionar_servicios"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Odontología y Servicios ▴"/>
+    <fragment
+            android:id="@+id/nav_gestionar_t_servicio"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Odontología y Servicios ▴"/>
+
+    <!-- Menú Citas y Pagos -->
+    <fragment
+            android:id="@+id/nav_gestionar_c_pagos"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Citas y Pagos ▴"/>
+    <fragment
+            android:id="@+id/nav_gestionar_t_cita"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Citas y Pagos ▴"/>
+    <fragment
+            android:id="@+id/nav_gestionar_m_pago"
+            android:name="com.example.sicac.ui.MenuInicioAdmin"
+            android:title="Citas y Pagos ▴"/>
+
+
+</navigation>
