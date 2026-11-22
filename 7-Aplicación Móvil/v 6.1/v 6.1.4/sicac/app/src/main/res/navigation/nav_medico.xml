@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_medico"
+            app:startDestination="@id/inicioMedicoFragment">
+
+    <!-- Inicio -->
+    <fragment
+            android:id="@+id/inicioMedicoFragment"
+            android:name="com.example.sicac.ui.MenuInicioMedico"
+            android:label="Inicio" />
+
+    <!-- Perfil -->
+    <fragment
+            android:id="@+id/perfilMedicoFragment"
+            android:name="com.example.sicac.ui.GestionarPerfilMedico"
+            android:label="Perfil ▴" />
+
+    <!-- Gestionar Mapa Dental -->
+    <fragment
+            android:id="@+id/gestionarMapaDentalFragment"
+            android:name="androidx.fragment.app.Fragment"
+            android:label="Gestionar Mapa Dental ▴" />
+
+    <!-- Gestionar Servicios -->
+    <fragment
+            android:id="@+id/gestionarServiciosFragment"
+            android:name="androidx.fragment.app.Fragment"
+            android:label="Gestionar Servicios ▴" />
+
+    <!-- Gestionar Historial -->
+    <fragment
+            android:id="@+id/gestionarHistorialFragment"
+            android:name="androidx.fragment.app.Fragment"
+            android:label="Gestionar Historial ▴" />
+
+    <!-- Gestionar Antecedentes -->
+    <fragment
+            android:id="@+id/gestionarAntecedentesFragment"
+            android:name="androidx.fragment.app.Fragment"
+            android:label="Gestionar Antecedentes ▴" />
+
+    <!-- Consultar Agenda -->
+    <fragment
+            android:id="@+id/consultarAgendaFragment"
+            android:name="androidx.fragment.app.Fragment"
+            android:label="Consultar Agenda ▴" />
+
+</navigation>

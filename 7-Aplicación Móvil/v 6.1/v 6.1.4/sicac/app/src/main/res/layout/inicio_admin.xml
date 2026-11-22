@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#d9ecff"
+              android:fontFamily="serif"
+              android:padding="16dp">
+
+    <TextView
+            android:id="@+id/tvBienvenidoAdmin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Bienvenido a SICAC"
+            android:textSize="20sp"
+            android:textColor="#103e6e"
+            android:textStyle="bold"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Sistema de Consulta y Agendamiento de Citas Odontologicas"
+            android:textSize="17sp"
+            android:textColor="#103e6e"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Seleccione una opción del menú"
+            android:textSize="15sp"
+            android:textColor="#103e6e"/>
+
+</LinearLayout>
