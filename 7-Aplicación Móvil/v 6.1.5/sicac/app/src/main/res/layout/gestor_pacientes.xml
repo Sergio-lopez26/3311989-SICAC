@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- MaterialCardView -> Crea una tarjeta para los registros de la API, acá solo ira un ejemplo de como quedará, pero no se mostrará este en la app -->
+<com.google.android.material.card.MaterialCardView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://android.com"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="6dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="3dp"
+        app:strokeWidth="1.5dp"
+        app:strokeColor="#B8DAFF">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="14dp">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+
+            <TextView
+                    android:id="@+id/tvNombreCompleto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="serif"
+                    android:text="Gustavo Francisco Petro Urrego"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:textColor="#103e6e" />
+
+            <TextView
+                    android:id="@+id/tvEstadoBadge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="10dp"
+                    android:paddingVertical="4dp"
+                    android:text="Activo"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    android:textStyle="bold"
+                    android:background="#198754" />
+        </LinearLayout>
+
+        <TextView
+                android:id="@+id/tvDocumento"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="ID: 1 | CC: 1020304050"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#212529" />
+
+        <TextView
+                android:id="@+id/tvContacto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="presidente@ejemplo.com • Cel: 3001234567"
+                android:textSize="13sp"
+                android:textColor="#495057" />
+
+        <TextView
+                android:id="@+id/tvDatosMedicos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Sangre: O+ | Masculino | Nac: 1960-04-19"
+                android:textSize="13sp"
+                android:textColor="#495057" />
+
+        <TextView
+                android:id="@+id/tvAcudiente"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Acudiente: Ninguno"
+                android:textSize="12sp"
+                android:textColor="#6C757D" />
+
+    </LinearLayout>
+</com.google.android.material.card.MaterialCardView>

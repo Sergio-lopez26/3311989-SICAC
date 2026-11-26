@@ -1,0 +1,339 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#F4F6F9"
+            android:fillViewport="true">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+        <!-- Encabezado -->
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Consulta Médica"
+                android:textColor="#103E6E"
+                android:textSize="24sp"
+                android:textStyle="bold" />
+
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:gravity="center"
+                android:text="Selecciona un paciente para registrar su diagnóstico"
+                android:textColor="#6C757D"
+                android:textSize="14sp" />
+
+        <!-- Buscador de Paciente -->
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:hint="Buscar paciente por nombre o documento..."
+                app:boxBackgroundColor="#FFFFFF"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:endIconMode="clear_text">
+
+            <AutoCompleteTextView
+                    android:id="@+id/etBuscarPaciente"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:completionThreshold="1"
+                    android:inputType="text"
+                    android:padding="14dp"
+                    android:textSize="15sp" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ProgressBar
+                android:id="@+id/progressHistorial"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:visibility="gone" />
+
+        <!-- Contenedor visible SOLO al seleccionar paciente -->
+        <LinearLayout
+                android:id="@+id/contenedorFormularioHistorial"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+            <!-- Tarjeta Azul Paciente Seleccionado -->
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="16dp"
+                    app:cardBackgroundColor="#103E6E"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="3dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="16dp">
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                        <TextView
+                                android:id="@+id/tvNombrePacienteSel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Paciente: Nombre"
+                                android:textColor="#FFFFFF"
+                                android:textSize="16sp"
+                                android:textStyle="bold" />
+
+                        <TextView
+                                android:id="@+id/tvInfoPacienteSel"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="4dp"
+                                android:text="Documento: --- | Sangre: ---"
+                                android:textColor="#E0E0E0"
+                                android:textSize="13sp" />
+                    </LinearLayout>
+
+                    <Button
+                            android:id="@+id/btnCambiarPaciente"
+                            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cambiar"
+                            android:textColor="#FFFFFF"
+                            app:strokeColor="#FFFFFF" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Tarjeta Blanca del Formulario -->
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="24dp"
+                    app:cardBackgroundColor="#FFFFFF"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp">
+
+                    <!-- Cita Asignada -->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Cita Asignada *"
+                            android:textColor="#0D6EFD"
+                            android:textStyle="bold" />
+
+                    <Spinner
+                            android:id="@+id/spinnerCita"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@android:drawable/btn_dropdown" />
+
+                    <!-- Motivo de Consulta -->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Motivo de consulta *"
+                            android:textColor="#212529"
+                            android:textStyle="bold" />
+
+                    <EditText
+                            android:id="@+id/etMotivo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Ej. Dolor en molar superior"
+                            android:inputType="textCapSentences"
+                            android:padding="12dp" />
+
+                    <!-- Tipo de Diagnóstico + Botón Nuevo -->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tipo de diagnóstico *"
+                            android:textColor="#212529"
+                            android:textStyle="bold" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="14dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                        <Spinner
+                                android:id="@+id/spinnerTipoDiagnostico"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:background="@android:drawable/btn_dropdown" />
+
+                        <Button
+                                android:id="@+id/btnNuevoDiagnostico"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:text="+ Nuevo"
+                                android:textColor="#0D6EFD"
+                                app:strokeColor="#0D6EFD" />
+                    </LinearLayout>
+
+                    <!-- Observaciones -->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Observaciones *"
+                            android:textColor="#212529"
+                            android:textStyle="bold" />
+
+                    <EditText
+                            android:id="@+id/etObservaciones"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@android:drawable/edit_text"
+                            android:gravity="top"
+                            android:hint="Detalles clínicos..."
+                            android:inputType="textMultiLine|textCapSentences"
+                            android:lines="3"
+                            android:padding="12dp" />
+
+                    <!-- Tratamiento Sugerido -->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tratamiento sugerido *"
+                            android:textColor="#212529"
+                            android:textStyle="bold" />
+
+                    <EditText
+                            android:id="@+id/etTratamiento"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="14dp"
+                            android:background="@android:drawable/edit_text"
+                            android:hint="Ej. Resina compuesta"
+                            android:inputType="textCapSentences"
+                            android:padding="12dp" />
+
+                    <!-- Medicamento (Opcional) + Botón Nuevo -->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Medicamento (Opcional)"
+                            android:textColor="#212529"
+                            android:textStyle="bold" />
+
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="14dp"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal">
+
+                        <Spinner
+                                android:id="@+id/spinnerMedicamento"
+                                android:layout_width="0dp"
+                                android:layout_height="48dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:background="@android:drawable/btn_dropdown" />
+
+                        <Button
+                                android:id="@+id/btnNuevoMedicamento"
+                                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="48dp"
+                                android:text="+ Nuevo"
+                                android:textColor="#0D6EFD"
+                                app:strokeColor="#0D6EFD" />
+                    </LinearLayout>
+
+                    <!-- Dosis -->
+                    <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Dosis"
+                            android:textColor="#212529"
+                            android:textStyle="bold" />
+
+                    <EditText
+                            android:id="@+id/etDosis"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:layout_marginBottom="20dp"
+                            android:background="@android:drawable/edit_text"
+                            android:enabled="false"
+                            android:hint="N/A"
+                            android:inputType="text"
+                            android:padding="12dp" />
+
+                    <!-- Botones Guardar / Cancelar -->
+                    <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                        <Button
+                                android:id="@+id/btnGuardarHistorial"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginEnd="8dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#198754"
+                                android:text="Guardar Registro"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+
+                        <Button
+                                android:id="@+id/btnCancelarHistorial"
+                                android:layout_width="0dp"
+                                android:layout_height="50dp"
+                                android:layout_marginStart="8dp"
+                                android:layout_weight="1"
+                                android:backgroundTint="#DC3545"
+                                android:text="Cancelar"
+                                android:textAllCaps="false"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>

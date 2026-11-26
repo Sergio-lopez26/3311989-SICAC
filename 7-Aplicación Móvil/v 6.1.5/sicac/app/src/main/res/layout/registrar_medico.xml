@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:background="#d9ecff"
+              android:fontFamily="serif"
+              android:padding="16dp">
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Registrar Nuevo Médico"
+            android:textSize="20sp"
+            android:textColor="#103e6e"
+            android:textStyle="bold"/>
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Para regitrar al médico, se requiere de un usuario registrado"
+            android:textSize="17sp"
+            android:textColor="#103e6e"/>
+
+    <!-- Equivalente a un btn-link de React -->
+    <TextView
+            android:id="@+id/btnRegistrarUsuarioM"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="Registrar nuevo usuario aquí"
+            android:textColor="?attr/colorPrimary"
+            android:textStyle="bold"
+            android:textSize="15sp"
+            android:clickable="true"
+            android:focusable="true"
+            android:background="?attr/selectableItemBackground" />
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="En caso de ya contar con un usuario registrado, por favor consultarlo a continuación"
+            android:textColor="#6C757D"
+            android:textSize="13sp"
+            android:gravity="center" />
+
+</LinearLayout>
